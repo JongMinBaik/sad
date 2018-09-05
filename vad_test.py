@@ -404,7 +404,7 @@ hangover2 = fe.check_speech(bdhv, frameoffset=0)''')
                     pass
                 ehmask[(i[0]-startcut):(i[1]+endcut)]=1
         else:
-            raise "Can't detect speech part."
+            return np.copy(ehmask)
         frameoffset_vad = np.copy(ehmask)
         return frameoffset_vad
     
